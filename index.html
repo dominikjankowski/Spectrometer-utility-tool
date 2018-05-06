@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Spectrometer utility tool</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+   <h1>Spectrometer utility tool.</h1>
+    <section class="sc-first">
+        <h2>Introduction</h2>
+        <p>Aim of this website is to deliver online facility for processing of spectrometer data (mainly from ASD FieldSpec 3 and 4).</p>
+        <p>Processed data consist of averaged measurements for particular measurement point, standard deviation of measurements and number of vegetation indices calculated on averaged spectra.</p>
+        <table class="tb-first">
+           <caption>Example of processed file data structure:</caption>
+            <thead>
+                <tr>
+                    <th>Wavelength; </th>
+                    <th>Meas1.001; </th>
+                    <th>Meas1.002; </th>
+                    <th>Meas1.003; </th>
+                    <th>Meas1.004; </th>
+                    <th>Average; </th>
+                    <th>Std dev.;</th>
+                    <th>Meas2.001; </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>350 ;</td>
+                    <td>0.2153 ;</td>
+                    <td>0.2115 ;</td>
+                    <td>0.2233 ;</td>
+                    <td>0.2513 ;</td>
+                    <td>0.22535 ;</td>
+                    <td>0.01557 ;</td>
+                    <td>... ;</td>
+                </tr>
+                <tr>
+                    <td>351 ;</td>
+                    <td>0.2153 ;</td>
+                    <td>0.2211 ;</td>
+                    <td>0.2107 ;</td>
+                    <td>0.2121 ;</td>
+                    <td>... ;</td>
+                    <td>... ;</td>
+                    <td>... ;</td>
+                </tr>
+                <tr>
+                    <td>352 ;</td>
+                    <td>0.1892 ;</td>
+                    <td>0.1920 ;</td>
+                    <td>0.1944 ;</td>
+                    <td>0.2012 ;</td>
+                    <td>... ;</td>
+                    <td>... ;</td>
+                    <td>... ;</td>
+                </tr>
+            </tbody>
+        </table>
+        <table>
+            <caption>Lits of calculated vegetation indices:</caption>
+            <tbody>
+                <tr>
+                    <td>ARI1</td>
+                    <td>ARVI</td>
+                    <td>CAI</td>
+                    <td>CRI1</td>
+                    <td>CRI2</td>
+                    <td>EVI</td>
+                </tr>
+                <tr>
+                    <td>MSI</td>
+                    <td>NDII</td>
+                    <td>NDLI</td>
+                    <td>NDVI705</td>
+                    <td>NDWI</td>
+                    <td>OSAVI</td>
+                </tr>
+                <tr>
+                    <td>PRI</td>
+                    <td>PSRI</td>
+                    <td>SIPI</td>
+                    <td>SR</td>
+                    <td>TCARI</td>
+                    <td>VARI</td>
+                </tr>
+                <tr>
+                    <td>VOG1</td>
+                    <td>VOG2</td>
+                    <td>VOG3</td>
+                    <td>WBI</td>
+                    <td>MCARI</td>
+                    <td>MSAVI</td>
+                </tr>
+                <tr>
+                    <td>MSR</td>
+                    <td>NDVI</td>
+                    <td>RDVI</td>
+                    <td>SAVI</td>
+                    <td>TVI</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <section class="sc-second">
+        <h2>Instruction of usage</h2>
+        <h4>Before you process data you have to prepare them according to following advice.</h4>
+        <p>Most important issue is naming of measurement points. In order to properly group measurements made at the same measurement point you have to name all measurements following bellow pattern: <strong>PointName.measurement_number</strong> example: <strong>Spruce.000</strong></p>
+        <p>IMPORTANT -> PointName and measurement_number have to be separated with <strong>. (<em>dot</em>)</strong>. Failing to do so will make proper grouping impossible.</p>
+        <p>Fields in your file have to be separated using <strong>; (<em>semicolon</em>)</strong>. This is easiest to archive if you save your file as <strong>.csv</strong> using LibreOffice or similar program <em>(remember to specify separation symbol as <strong>;</strong>)</em>.</p>
+    </section>
+    <section class="sc-third">
+        <h2>Application</h2>
+        <p>Use bellow form to select your file containing data you want to process. Once processing is done results will be automatically downloaded to your computer and saved as <strong>processed_spectra.csv</strong></p>
+        <form action="/" method="post" enctype="multipart/form-data">
+            <div>
+               <input type="file" name="data" id="uploadedfile" accept=".csv" class="inputfile">
+                <label for="uploadedfile"><strong>Select a file for processing</strong></label>
+            </div>
+            <div class="preview">
+                <p>No files currently selected for upload</p>
+            </div>
+            <div>
+                <button type="submit">Upload</button>
+            </div>
+        </form>
+    </section>
+   <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
