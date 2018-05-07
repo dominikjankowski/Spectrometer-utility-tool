@@ -25,7 +25,7 @@ body {
 /*-----------------------------------------------------*/
 section {
     margin: 0 auto;
-   padding: 50px 30px;
+    padding: 50px 30px;
     max-width: 1140px;
     
 }
@@ -33,10 +33,10 @@ section {
 
 h1 {
     font-weight: 900;
-    margin: 50px 0 20px 0;
+    margin: 50px 0;
     text-align: center;
     color: #d25959;
-    font-size: 240%;
+    font-size: 260%;
     word-spacing: 4px;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -45,13 +45,85 @@ h1 {
 h2 {
     font-weight: 700;
     letter-spacing: 1px;
-    font-size: 180%;
+    font-size: 220%;
     word-spacing: 2px;
     text-align: center;
-    margin-bottom: 30px;
+   
+}
+h4{
+    font-weight: 700;
+    font-size: 130%;
+    text-align: center;
+    margin-top: 50px;
+    word-spacing: 2px;
 }
 p{
-    font-size: 100%;
+    font-size: 110%;
     line-height: 145%;
-    text-align: center;
+    text-align: left;
+    margin-right: 30px;
+    padding: 10px;
+    
 }
+/*-----------------------------------------------------*/
+
+/*Introduction*/
+
+/*-----------------------------------------------------*/
+.paragraphs {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 15px;
+    flex-flow: row ;
+}
+table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    border: 3px solid ;
+    margin-top: 50px 
+}
+
+thead th{
+  width: 12%;
+}
+
+th, td {
+  padding: 20px;
+  text-align: center;
+  font-size: 100%;
+  
+}
+caption{
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+    font-size: 90%;
+    font-weight: 700;
+    color: #d25959;
+}
+/*-----------------------------------------------------*/
+
+/*Instruction*/
+
+/*-----------------------------------------------------*/
+.sc-second{
+    padding-bottom: 0px
+}
+/*-----------------------------------------------------*/
+
+/*Application*/
+
+/*-----------------------------------------------------*/
+.sc-third h2{
+    margin-bottom: 30px;
+}
+.sc-third p{ 
+    word-spacing: 4px;
+    letter-spacing: 2px;
+    text-align: justify;
+}
+form{
+    margin-top: 50px
+}
+
+
