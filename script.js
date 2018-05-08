@@ -2,7 +2,7 @@ var input = document.querySelector('input');
 var preview = document.querySelector('.preview');
 
 input.addEventListener('change', updateFunctionDisplay);
-
+ 
 function updateFunctionDisplay() {
     
   while(preview.firstChild) {
@@ -29,21 +29,16 @@ function updateFunctionDisplay() {
   }
 }
 
-//var fileTypes = [
-//  'image/jpeg',
-//  'image/pjpeg',
-//  'image/png'
-//]
-//
-//function validFileType(file) {
-//  for(var i = 0; i < fileTypes.length; i++) {
-//    if(file.type === fileTypes[i]) {
-//      return true;
-//    }
-//  }
-//
-//  return false;
-//}
+
+
+function validFileType(file){
+    if(file.name.indexOf(".csv") > (file.name.length-5)){
+        return true;
+    }else{
+        return false;
+    }
+};
+
 
 function returnFileSize(number) {
   if(number < 1024) {
@@ -54,3 +49,4 @@ function returnFileSize(number) {
     return (number/1048576).toFixed(1) + 'MB';
   }
 }
+
