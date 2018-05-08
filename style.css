@@ -31,6 +31,7 @@ section {
 
 
 h1 {
+    width: 100%;
     font-weight: 900;
     margin: 50px 0;
     text-align: center;
@@ -179,11 +180,7 @@ form {
   margin: 0 auto;
   padding: 20px;
 }
-form p {
-  list-style-type: none;
-  line-height: 32px;
-  width: 100%;
-}
+
 label, button {
   background-color: #d25959;
   padding: 10px 15px;
@@ -216,4 +213,8 @@ label:hover, button:hover{
 .preview p{
     padding: 0;
     margin: 0;
+    text-align: center;
+    list-style-type: none;
+    line-height: 32px;
 }
+
