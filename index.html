@@ -10,9 +10,7 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-   <h1>Spectrometer utility tool <i class="fas fa-cogs"></i>
-</h1>
-      
+   <h1>Spectrometer utility tool <i class="fas fa-cogs"></i></h1>
        <section class="sc-first">
             <h2>Introduction <i class="fas fa-angle-double-down"></i></h2>
             <section class="paragraphs">
@@ -116,18 +114,20 @@
         <h2>Instruction of usage <i class="far fa-edit"></i></h2>
         <h4>Before you process data you have to prepare them according to following advice!</h4>
         <section class="paragraphs">
-        <p>Most important issue is naming of measurement points. In order to properly group measurements made at the same measurement point you have to name all measurements following bellow pattern: <strong>PointName.measurement_number</strong> example: <strong>Spruce.000</strong></p>
-        <p>IMPORTANT -> PointName and measurement_number have to be separated with <strong>. (<em>dot</em>)</strong>. Failing to do so will make proper grouping impossible.</p>
-        <p>Fields in your file have to be separated using <strong>; (<em>semicolon</em>)</strong>. This is easiest to archive if you save your file as <strong>.csv</strong> using LibreOffice or similar program <em>(remember to specify separation symbol as <strong>;</strong>)</em>.</p>
+        <p class="p-first"><i class="fas fa-angle-right"></i>Most important issue is naming of measurement points. In order to properly group measurements made at the same measurement point you have to name all measurements following bellow pattern: <strong>PointName.measurement_number</strong> example: <strong>Spruce.000</strong></p>
+        <p class="p-second"><i class="fas fa-angle-right"></i>IMPORTANT -> PointName and measurement_number have to be separated with <strong>. (<em>dot</em>)</strong>. Failing to do so will make proper grouping impossible.</p>
+        <p class="p-third"><i class="fas fa-angle-double-down"></i>Fields in your file have to be separated using <strong>; (<em>semicolon</em>)</strong>. This is easiest to archive if you save your file as <strong>.csv</strong> using LibreOffice or similar program <em>(remember to specify separation symbol as <strong>;</strong>)</em>.</p>
         </section>
     </section>
     <section class="sc-third">
         <h2>Application <i class="far fa-file-alt"></i></h2>
         <p>Use bellow form to select your file containing data you want to process. Once processing is done results will be automatically downloaded to your computer and saved as <strong>processed_spectra.csv</strong></p>
+        
+        
         <form action="/" method="post" enctype="multipart/form-data">
             <div>
-               <input type="file" name="data" id="uploadedfile" accept=".csv" class="inputfile">
                 <label for="uploadedfile"><strong>Select a file for processing</strong></label>
+                <input type="file" name="data" id="uploadedfile"  accept=".html" >
             </div>
             <div class="preview">
                 <p>No files currently selected for upload</p>
@@ -136,6 +136,8 @@
                 <button type="submit">Upload</button>
             </div>
         </form>
+        
+        
     </section>
    <script src="script.js"></script>
 </body>
