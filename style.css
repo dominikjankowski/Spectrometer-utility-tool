@@ -24,11 +24,11 @@ body {
 
 /*-----------------------------------------------------*/
 section {
-    margin: 0 auto;
-    padding: 50px 30px;
-    max-width: 1140px;    
+    
+    padding: 60px 10px;
+     margin: 0 auto;
+    max-width: 1140px;  
 }
-
 
 h1 {
     width: 100%;
@@ -61,10 +61,7 @@ h4{
 p{
     font-size: 110%;
     line-height: 145%;
-    text-align: left;
-    margin-right: 30px;
     padding: 10px;
-    
 }
 .fa-cogs{
     color: black;
@@ -75,17 +72,15 @@ p{
     color: #d25959;
     opacity: 0.8;
 }
+.box {
+    padding: 1%;
+}
 /*-----------------------------------------------------*/
 
 /*Introduction*/
 
 /*-----------------------------------------------------*/
-.paragraphs {
-    display: flex;
-    justify-content: space-around;
-    padding: 20px 15px;
-    flex-flow: row ;
-}
+
 table {
     table-layout: fixed;
     width: 100%;
@@ -93,6 +88,7 @@ table {
     border: 3px solid ;
     margin-top: 50px; 
     color: #383030;
+    min-width: 1050px;
 }
 
 thead th{
@@ -129,31 +125,33 @@ caption{
 .p-first .fa-angle-right{
    z-index: -1;
    color: #d25959;
-   font-size: 1700%; 
+   font-size: 1000%; 
    position: absolute;
-   left: 90px;
-   top: -50px;
+   left: 30%;
+   top: 0;
     opacity: 0.3;
 }
 .p-second .fa-angle-right{
    z-index: -1;
    color: #d25959;;
-   font-size: 1700%; 
+   font-size: 1000%; 
    position: absolute;
-   left: 0px;
-   top: -50px;
+   left: 30%;
+   top: 0;
    opacity: 0.3;
 }
 .p-third .fa-angle-double-down{
    z-index: -1;
    color: #d25959;
-   font-size: 1700%; 
+   font-size: 1000%; 
    position: absolute;
-   left: 20px;
-   top: -25px;
+   left: 30%;
+   top: 7%;
    opacity: 0.3;
 }
-
+.fa-angle-down{
+    display: none;
+}
 
 /*-----------------------------------------------------*/
 
@@ -217,4 +215,139 @@ label:hover, button:hover{
     list-style-type: none;
     line-height: 32px;
 }
+
+
+@media screen and (max-width: 1050px) {
+    
+    table {
+/*    table-layout: fixed;*/
+    width: 100%;
+    border-collapse: collapse;
+    border: 3px solid ;
+    margin-top: 50px; 
+    color: #383030;
+    border-spacing: 0;
+}
+
+thead th{
+  width: 12%;
+}
+
+th, td {
+  padding: 8px;
+  font-size: 90%;
+  font-weight: 700;
+  text-align: left;
+}
+caption{
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+    font-size: 90%;
+    font-weight: 700;
+    color: #d25959;
+}
+    
+}
+
+
+@media screen and (max-width: 900px) {
+.span_1_of_3{
+        width: 100%; 
+}
+.p-first .fa-angle-right{
+   display: none;
+}
+.p-second .fa-angle-right{
+   display: none
+}
+.p-third .fa-angle-double-down{
+   display: none;
+}
+.p-first .fa-angle-down{
+    display: block;
+    z-index: -1;
+   color: #d25959;
+   font-size: 600%; 
+   position: absolute;
+   left: 40%;
+   top: 0%;
+   opacity: 0.3;
+}
+.p-second .fa-angle-down{
+   display: block;
+   z-index: -1;
+   color: #d25959;
+   font-size: 600%; 
+   position: absolute;
+   left: 40%;
+   top: -20%;
+   opacity: 0.3;
+}
+.p-third .fa-angle-down{
+   display: block;
+   z-index: -1;
+   color: #d25959;
+   font-size: 600%; 
+   position: absolute;
+   left: 40%;
+   top: -10%;
+   opacity: 0.3;
+        
+    }
+    
+}
+@media screen and (max-width: 600px) {
+    section{
+        padding: 60px 0;
+    }
+    .p-first .fa-angle-down{
+    display: none;
+    }
+    .p-second .fa-angle-down{
+    display: none;
+    }
+    .p-third .fa-angle-down{
+    display: none;
+    }
+} 
+
+@media screen and (max-width: 450px) {
+    h1 {
+    width: 100%;
+    font-weight: 900;
+    margin: 50px 0;
+    text-align: center;
+    color: #d25959;
+    font-size: 170%;
+    word-spacing: 4px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-size: 160%;
+    word-spacing: 2px;
+    text-align: center;
+    color: #383030;
+   
+}
+h4{
+    font-weight: 700;
+    font-size: 110%;
+    text-align: center;
+    margin-top: 50px;
+    word-spacing: 2px;
+}
+p{
+    font-size: 100%;
+    line-height: 145%;
+    padding: 10px;
+    
+}
+.p-first strong {
+       word-break: break-all; 
+    }    
+}    
 

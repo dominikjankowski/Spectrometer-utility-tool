@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Spectrometer utility tool</title>
     <link rel="stylesheet" type="text/css" href="vendors/normalize.css">
-    <link rel="stylesheet" type="text/css" href="vendors/grid.css">
+    <link rel="stylesheet" type="text/css" href="grid/grid.css">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="style.css">
@@ -13,23 +13,33 @@
 <body>
    <h1>Spectrometer utility tool <i class="fas fa-cogs"></i></h1>
        <section class="sc-first">
-            <h2>Introduction <i class="fas fa-angle-double-down"></i></h2>
-            <section class="paragraphs">
-                <p>Aim of this website is to deliver online facility for processing of spectrometer data (mainly from ASD FieldSpec 3 and 4).</p>    
-                <p>Processed data consist of averaged measurements for particular measurement point, standard deviation of measurements and number of vegetation indices calculated on averaged spectra.</p>
-            </section>
+           
+               <h2>Introduction <i class="fas fa-angle-double-down"></i></h2>    
+           
+            
+            <div class="section group">
+               <div class= "col span_1_of_2">
+                   <p>Aim of this website is to deliver online facility for processing of spectrometer data (mainly from ASD FieldSpec 3 and 4).</p>
+               </div>
+                <div class = "col span_1_of_2">
+                    <p>Processed data consist of averaged measurements for particular measurement point, standard deviation of measurements and number of vegetation indices calculated on averaged spectra.</p>
+                </div>    
+                
+            </div>
+                
+            <div style="overflow-y:auto;">
             <table class="tb-first" >
            <caption>Example of processed file data structure:</caption>
             <thead>
                 <tr>
-                    <th>Wavelength; </th>
-                    <th>Meas1.001; </th>
-                    <th>Meas1.002; </th>
-                    <th>Meas1.003; </th>
-                    <th>Meas1.004; </th>
-                    <th>Average; </th>
+                    <th>Wavelength;</th>
+                    <th>Meas1.001;</th>
+                    <th>Meas1.002;</th>
+                    <th>Meas1.003;</th>
+                    <th>Meas1.004;</th>
+                    <th>Average;</th>
                     <th>Std dev.;</th>
-                    <th>Meas2.001; </th>
+                    <th>Meas2.001;</th>
                 </tr>
             </thead>
             <tbody>
@@ -65,6 +75,8 @@
                 </tr>
             </tbody>
         </table>
+        </div>
+        <div  style="overflow-y:auto;">
         <table>
             <caption>Lits of calculated vegetation indices:</caption>
             <tbody>
@@ -110,15 +122,26 @@
                 </tr>
             </tbody>
         </table>
+           </div>
     </section>
     <section class="sc-second">
         <h2>Instruction of usage <i class="far fa-edit"></i></h2>
         <h4>Before you process data you have to prepare them according to following advice!</h4>
-        <section class="paragraphs">
-        <p class="p-first"><i class="fas fa-angle-right"></i>Most important issue is naming of measurement points. In order to properly group measurements made at the same measurement point you have to name all measurements following bellow pattern: <strong>PointName.measurement_number</strong> example: <strong>Spruce.000</strong></p>
-        <p class="p-second"><i class="fas fa-angle-right"></i>IMPORTANT -> PointName and measurement_number have to be separated with <strong>. (<em>dot</em>)</strong>. Failing to do so will make proper grouping impossible.</p>
-        <p class="p-third"><i class="fas fa-angle-double-down"></i>Fields in your file have to be separated using <strong>; (<em>semicolon</em>)</strong>. This is easiest to archive if you save your file as <strong>.csv</strong> using LibreOffice or similar program <em>(remember to specify separation symbol as <strong>;</strong>)</em>.</p>
-        </section>
+        <div class="section group">
+           <div class="col span_1_of_3">
+               <p class="p-first"><i class="fas fa-angle-right"></i><i class="fas fa-angle-down"></i>Most important issue is naming of measurement points. In order to properly group measurements made at the same measurement point you have to name all measurements following bellow pattern: <strong>PointName.measurement_number</strong> example: <strong>Spruce.000</strong></p>
+           </div>
+           <div class="col span_1_of_3">
+               <p class="p-second"><i class="fas fa-angle-right"></i><i class="fas fa-angle-down"></i>IMPORTANT -> PointName and measurement_number have to be separated with <strong>. (<em>dot</em>)</strong>. Failing to do so will make proper grouping impossible.</p>
+           </div>
+           <div class="col span_1_of_3">
+               <p class="p-third"><i class="fas fa-angle-double-down"></i><i class="fas fa-angle-down"></i>Fields in your file have to be separated using <strong>; (<em>semicolon</em>)</strong>. This is easiest to archive if you save your file as <strong>.csv</strong> using LibreOffice or similar program <em>(remember to specify separation symbol as <strong>;</strong>)</em>.</p>
+           </div>
+            
+            
+            
+        </div>
+        
     </section>
     <section class="sc-third">
         <h2>Application <i class="far fa-file-alt"></i></h2>
